@@ -81,17 +81,7 @@ export default function Skills() {
                     <div className="mb-2">
                       <h4 className="text-lg font-black text-gray-900 dark:text-white mt-1">{skill.name}</h4>
                     </div>
-                    <div className="mt-6">
-                      <div className="flex justify-between mb-2">
-                        <span className="text-sm font-bold text-gray-500">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-100 dark:bg-gray-900 h-2.5 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
+
                   </div>
                 ))}
               </div>
