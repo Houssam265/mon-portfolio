@@ -388,15 +388,19 @@ export default function Projects() {
 
             {/* Modal Footer */}
             <div className="flex items-center justify-between px-6 py-4 border-t border-gray-100 dark:border-slate-800 bg-gray-50/70 dark:bg-slate-900/70">
-              <a
-                href={activeVideoProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors text-sm shadow-md"
-              >
-                <Github size={18} />
-                <span>{t('projects.button_code')}</span>
-              </a>
+              {activeVideoProject.github ? (
+                <a
+                  href={activeVideoProject.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-bold rounded-xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors text-sm shadow-md"
+                >
+                  <Github size={18} />
+                  <span>{t('projects.button_code')}</span>
+                </a>
+              ) : (
+                <div />
+              )}
               <button
                 type="button"
                 onClick={() => setActiveVideoProject(null)}
