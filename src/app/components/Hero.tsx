@@ -49,7 +49,7 @@ export default function Hero() {
 
           <div className="flex space-x-8 text-gray-400 dark:text-gray-600">
             {[
-              { icon: Github, href: "https://github.com/harisshoussam" },
+              { icon: Github, href: "https://github.com/Houssam265" },
               { icon: Linkedin, href: "https://www.linkedin.com/in/harisshoussam" },
               { icon: Mail, href: "/contact", isLink: true }
             ].map((social, i) => (

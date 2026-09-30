@@ -117,7 +117,7 @@ export default function Contact() {
                   <a href="https://linkedin.com/in/harisshoussam" className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center hover:bg-white hover:text-blue-600 transition-all">
                     <Linkedin size={24} />
                   </a>
-                  <a href="https://github.com/harisshoussam" className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center hover:bg-white hover:text-blue-600 transition-all">
+                  <a href="https://github.com/Houssam265" className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center hover:bg-white hover:text-blue-600 transition-all">
                     <Github size={24} />
                   </a>
                 </div>

@@ -10,17 +10,36 @@ import {
   Container,
   Layout,
   Cloud,
-  Settings
+  Settings,
+  Zap,
+  Smartphone,
+  Workflow,
+  Globe,
+  Users,
+  Layers,
+  Wind,
+  Shield,
+  Key
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const skillsData = [
+  { name: 'Flutter', icon: <Smartphone className="text-cyan-400" />, level: 95, categoryKey: 'skills.category_mobile_dev' },
+  { name: 'Riverpod', icon: <Layers className="text-blue-500" />, level: 90, categoryKey: 'skills.category_mobile_dev' },
+  { name: 'Provider', icon: <Workflow className="text-teal-400" />, level: 85, categoryKey: 'skills.category_mobile_dev' },
+  { name: 'go_router', icon: <Globe className="text-indigo-400" />, level: 85, categoryKey: 'skills.category_mobile_dev' },
+  { name: 'Figma', icon: <Layout className="text-pink-500" />, level: 90, categoryKey: 'skills.category_mobile_dev' },
+  { name: 'Google AdMob', icon: <Smartphone className="text-amber-500" />, level: 85, categoryKey: 'skills.category_mobile_dev' },
+
   { name: 'React', icon: <Code2 className="text-blue-400" />, level: 90, categoryKey: 'skills.category_web_dev' },
   { name: 'Node.js', icon: <Code2 className="text-green-500" />, level: 85, categoryKey: 'skills.category_web_dev' },
   { name: 'Laravel (PHP)', icon: <Code2 className="text-red-500" />, level: 85, categoryKey: 'skills.category_web_dev' },
   { name: 'ASP.NET (C#)', icon: <Code2 className="text-purple-600" />, level: 90, categoryKey: 'skills.category_web_dev' },
   { name: 'Angular', icon: <Code2 className="text-red-600" />, level: 80, categoryKey: 'skills.category_web_dev' },
+  { name: 'Spring Boot', icon: <Code2 className="text-green-600" />, level: 80, categoryKey: 'skills.category_web_dev' },
+  { name: 'Webflow', icon: <Layers className="text-blue-500" />, level: 90, categoryKey: 'skills.category_web_dev' },
 
+  { name: 'Dart', icon: <Code2 className="text-cyan-500" />, level: 90, categoryKey: 'skills.category_languages' },
   { name: 'JavaScript', icon: <FileJson className="text-yellow-400" />, level: 90, categoryKey: 'skills.category_languages' },
   { name: 'Python', icon: <Code2 className="text-yellow-500" />, level: 80, categoryKey: 'skills.category_languages' },
   { name: 'C#', icon: <Code2 className="text-purple-600" />, level: 90, categoryKey: 'skills.category_languages' },
@@ -31,17 +50,27 @@ const skillsData = [
 
   { name: 'MySQL', icon: <Database className="text-blue-600" />, level: 90, categoryKey: 'skills.category_databases' },
   { name: 'SQL Server', icon: <Database className="text-red-600" />, level: 90, categoryKey: 'skills.category_databases' },
-  { name: 'SQL Developer', icon: <Database className="text-green-600" />, level: 85, categoryKey: 'skills.category_databases' },
+  { name: 'PostgreSQL', icon: <Database className="text-blue-400" />, level: 85, categoryKey: 'skills.category_databases' },
+  { name: 'Supabase', icon: <Zap className="text-green-500" />, level: 85, categoryKey: 'skills.category_databases' },
   { name: 'Oracle', icon: <Database className="text-red-500" />, level: 80, categoryKey: 'skills.category_databases' },
 
   { name: 'Docker', icon: <Container className="text-blue-600" />, level: 75, categoryKey: 'skills.category_devops_tools' },
+  { name: 'Kubernetes', icon: <Cloud className="text-blue-500" />, level: 70, categoryKey: 'skills.category_devops_tools' },
+  { name: 'Tor & Réseau sécurisé', icon: <Shield className="text-emerald-500" />, level: 85, categoryKey: 'skills.category_devops_tools' },
+  { name: 'OAuth2 / Google Sign-In', icon: <Key className="text-amber-500" />, level: 90, categoryKey: 'skills.category_devops_tools' },
   { name: 'Git/GitHub', icon: <Github className="text-black dark:text-white" />, level: 90, categoryKey: 'skills.category_devops_tools' },
+  { name: 'Make.com', icon: <Workflow className="text-purple-500" />, level: 90, categoryKey: 'skills.category_devops_tools' },
+  { name: 'GoHighLevel', icon: <Users className="text-blue-600" />, level: 85, categoryKey: 'skills.category_devops_tools' },
   { name: 'UML', icon: <Code2 className="text-gray-600" />, level: 85, categoryKey: 'skills.category_devops_tools' },
 
+  { name: 'LLM embarqué (GGUF)', icon: <Cpu className="text-purple-400" />, level: 88, categoryKey: 'skills.category_frameworks_libs' },
+  { name: 'Odoo ERP', icon: <Layers className="text-purple-600" />, level: 85, categoryKey: 'skills.category_frameworks_libs' },
+  { name: 'Flask', icon: <Code2 className="text-gray-700 dark:text-gray-300" />, level: 80, categoryKey: 'skills.category_frameworks_libs' },
   { name: 'Bootstrap', icon: <Layout className="text-purple-500" />, level: 85, categoryKey: 'skills.category_frameworks_libs' },
   { name: 'Windows Forms', icon: <Layout className="text-blue-500" />, level: 85, categoryKey: 'skills.category_frameworks_libs' },
   { name: 'Web Forms', icon: <Layout className="text-blue-400" />, level: 80, categoryKey: 'skills.category_frameworks_libs' },
   { name: 'Swing', icon: <Layout className="text-red-400" />, level: 75, categoryKey: 'skills.category_frameworks_libs' },
+  { name: 'JavaFX', icon: <Layout className="text-orange-400" />, level: 80, categoryKey: 'skills.category_frameworks_libs' },
 ];
 
 export default function Skills() {

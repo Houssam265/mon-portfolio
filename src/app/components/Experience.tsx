@@ -5,6 +5,23 @@ import { useTranslation } from 'react-i18next';
 
 const experiencesData = [
     {
+        titleKey: 'experience.agh_title',
+        companyKey: 'experience.agh_company',
+        locationKey: 'experience.agh_location',
+        periodKey: 'experience.agh_period',
+        durationKey: 'experience.agh_duration',
+        typeKey: 'experience.agh_type',
+        descriptionKeys: [
+            'experience.agh_description_1',
+            'experience.agh_description_2',
+            'experience.agh_description_3',
+            'experience.agh_description_4',
+            'experience.agh_description_5'
+        ],
+        tech: ['Flutter', 'Dart', 'Riverpod', 'Provider', 'go_router', 'Figma', 'Tor / NDK', 'SLM / llama.cpp', 'Google AdMob', 'OAuth2'],
+        highlight: true
+    },
+    {
         titleKey: 'experience.data_replies_title',
         companyKey: 'experience.data_replies_company',
         locationKey: 'experience.data_replies_location',
@@ -111,6 +128,7 @@ export default function Experience() {
                                         ))}
                                     </div>
 
+                                    {/* 
                                     {exp.certificate && (
                                         <a
                                             href={exp.certificate}
@@ -122,6 +140,7 @@ export default function Experience() {
                                             <span>{t('experience.view_certificate')}</span>
                                         </a>
                                     )}
+                                    */}
                                 </div>
                             </div>
                         </div>
