@@ -1,18 +1,20 @@
 {
   "hero": {
-    "tagline": "DevOps · Salesforce",
+    "tagline": "DevOps · Salesforce · ERP Odoo",
     "title_part1": "HARISS",
     "title_part2": "HOUSSAM",
     "description_part1": "Student in",
     "description_part2": "Computer Engineering",
     "description_part3": "Future State Engineer passionate about",
-    "description_part4": "DevOps, Salesforce and automation",
+    "description_part4": "DevOps, Salesforce, ERP Odoo and automation",
     "button_path": "My Journey",
     "button_cv": "CV",
     "badge_docker_category": "Container",
     "badge_docker_name": "Docker",
     "badge_kubernetes_category": "Orchestrator",
-    "badge_kubernetes_name": "Kubernetes"
+    "badge_kubernetes_name": "Kubernetes",
+    "badge_odoo_category": "ERP Solution",
+    "badge_odoo_name": "Odoo 19"
   },
   "navbar": {
     "accueil": "Home",
@@ -36,9 +38,10 @@
     "academic_path": "My academic background has provided me with a solid foundation in software engineering and modern web technologies. I am particularly fascinated by the ecosystem",
     "devops": "DevOps",
     "salesforce": "Salesforce",
+    "odoo": "ERP Odoo",
     "automation": "process automation.",
     "objective_title": "My Objective",
-    "objective_description": "To become a DevOps and Salesforce expert, capable of designing robust cloud architectures and high-performance CRM solutions.",
+    "objective_description": "To become an expert engineer combining DevOps, Salesforce CRM, and ERP Odoo, capable of designing robust cloud architectures, high-performance enterprise management solutions, and automated workflows.",
     "education_title": "Education",
     "bac_title": "Scientific Baccalaureate",
     "bac_school": "Lycée Ben M'sik, Casablanca",
@@ -114,9 +117,10 @@
     "intro_text": "A technical overview of the tools and languages I use to bring your projects to life.",
     "category_mobile_dev": "Mobile Development & UI/UX",
     "category_web_dev": "Web Development",
+    "category_erp_crm": "ERP, CRM & Automation",
+    "category_devops_tools": "DevOps & Tools",
     "category_languages": "Languages",
     "category_databases": "Databases",
-    "category_devops_tools": "DevOps & Tools",
     "category_frameworks_libs": "Frameworks & Libs"
   },
   "experience": {
@@ -216,6 +220,6 @@
   },
   "footer": {
     "copyright": "© {{year}} Hariss Houssam.",
-    "description": "Computer Science Student & Aspiring DevOps and Salesforce Engineer"
+    "description": "Computer Science Student & Aspiring DevOps, Salesforce and ERP Odoo Engineer"
   }
 }

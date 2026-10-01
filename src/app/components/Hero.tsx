@@ -82,19 +82,27 @@ export default function Hero() {
             </div>
 
             {/* Floating Badges */}
-            <div className="absolute -top-8 -right-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-5 rounded-[2rem] shadow-2xl border border-white/50 dark:border-gray-700/50 flex items-center space-x-4 group">
-              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-600/20 group-hover:rotate-12 transition-transform">D</div>
+            <div className="absolute -top-8 -right-4 sm:-right-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-4 sm:p-5 rounded-[2rem] shadow-2xl border border-white/50 dark:border-gray-700/50 flex items-center space-x-4 group z-10">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white font-black text-lg sm:text-xl shadow-lg shadow-blue-600/20 group-hover:rotate-12 transition-transform">D</div>
               <div>
                 <p className="text-[10px] font-black uppercase tracking-widest text-blue-600 dark:text-blue-400">{t('hero.badge_docker_category')}</p>
-                <p className="font-black text-gray-900 dark:text-white text-lg">{t('hero.badge_docker_name')}</p>
+                <p className="font-black text-gray-900 dark:text-white text-base sm:text-lg">{t('hero.badge_docker_name')}</p>
               </div>
             </div>
 
-            <div className="absolute -bottom-8 -left-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-5 rounded-[2rem] shadow-2xl border border-white/50 dark:border-gray-700/50 flex items-center space-x-4 group">
-              <div className="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-emerald-500/20 group-hover:-rotate-12 transition-transform">K</div>
+            <div className="absolute -bottom-8 -left-4 sm:-left-8 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-4 sm:p-5 rounded-[2rem] shadow-2xl border border-white/50 dark:border-gray-700/50 flex items-center space-x-4 group z-10">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white font-black text-lg sm:text-xl shadow-lg shadow-emerald-500/20 group-hover:-rotate-12 transition-transform">K</div>
               <div>
                 <p className="text-[10px] font-black uppercase tracking-widest text-emerald-500">{t('hero.badge_kubernetes_category')}</p>
-                <p className="font-black text-gray-900 dark:text-white text-lg">{t('hero.badge_kubernetes_name')}</p>
+                <p className="font-black text-gray-900 dark:text-white text-base sm:text-lg">{t('hero.badge_kubernetes_name')}</p>
+              </div>
+            </div>
+
+            <div className="hidden sm:flex absolute top-1/2 -left-6 md:-left-12 -translate-y-1/2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-4 sm:p-5 rounded-[2rem] shadow-2xl border border-white/50 dark:border-gray-700/50 items-center space-x-4 group z-10">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-600 rounded-2xl flex items-center justify-center text-white font-black text-lg sm:text-xl shadow-lg shadow-purple-600/20 group-hover:rotate-12 transition-transform">O</div>
+              <div>
+                <p className="text-[10px] font-black uppercase tracking-widest text-purple-600 dark:text-purple-400">{t('hero.badge_odoo_category')}</p>
+                <p className="font-black text-gray-900 dark:text-white text-base sm:text-lg">{t('hero.badge_odoo_name')}</p>
               </div>
             </div>
           </div>

@@ -53,7 +53,7 @@ const projectsData: ProjectItem[] = [
     titleKey: 'projects.project_garage_management_title',
     descriptionKey: 'projects.project_garage_management_description',
     image: '/projects/garage-management-kanban.png',
-    tags: ['Odoo 19', 'Python', 'PostgreSQL 16', 'Docker', 'Flask', 'XML-RPC'],
+    tags: ['ERP Odoo 19', 'Python', 'PostgreSQL 16', 'Docker', 'Flask', 'XML-RPC'],
     github: 'https://github.com/Houssam265/garage-management-odoo',
     demo: null,
     video: '/garage-management-demo.mp4',

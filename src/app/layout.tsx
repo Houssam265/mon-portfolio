@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hariss Houssam | DevOps Engineer Portfolio",
+  title: "Hariss Houssam | DevOps, Salesforce & ERP Odoo Engineer Portfolio",
   description:
-    "Portfolio of Hariss Houssam, Computer Science Student and Aspiring DevOps Engineer",
+    "Portfolio of Hariss Houssam, Computer Science Student and Aspiring DevOps, Salesforce & ERP Odoo Engineer",
 };
 
 export default function RootLayout({

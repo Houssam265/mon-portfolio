@@ -27,7 +27,7 @@ export default function About() {
                 {t('about.name_intro')} <span className="text-gray-900 dark:text-white font-black underline decoration-blue-500 decoration-4 underline-offset-4">{t('about.name')}</span>, {t('about.engineer_status')}
               </p>
               <p className="leading-relaxed text-lg">
-                {t('about.academic_path')} <span className="text-blue-600 dark:text-blue-400 font-bold">{t('about.devops')}</span>, <span className="text-blue-600 dark:text-blue-400 font-bold">{t('about.salesforce')}</span> et {t('about.automation')}
+                {t('about.academic_path')} <span className="text-blue-600 dark:text-blue-400 font-bold">{t('about.devops')}</span>, <span className="text-blue-600 dark:text-blue-400 font-bold">{t('about.salesforce')}</span>, <span className="text-purple-600 dark:text-purple-400 font-bold">{t('about.odoo')}</span> et {t('about.automation')}
               </p>
             </div>
 
