@@ -77,6 +77,22 @@ const projectsData: ProjectItem[] = [
     demo: 'https://giftplan.ct.ws/',
   },
   {
+    titleKey: 'projects.project_agileflow_title',
+    descriptionKey: 'projects.project_agileflow_description',
+    image: '/projects/agileflow.jpg',
+    tags: ['Spring Boot 3', 'Angular 17', 'MySQL', 'JWT', 'Kanban', 'Rapports PDF'],
+    github: 'https://github.com/Houssam265/AgileFlow.git',
+    demo: 'https://agileflow-mu.vercel.app',
+  },
+  {
+    titleKey: 'projects.project_chrionline_title',
+    descriptionKey: 'projects.project_chrionline_description',
+    image: '/projects/chrionline.jpg',
+    tags: ['Java', 'JavaFX', 'MySQL', 'Sockets TCP/UDP', 'Sécurité Réseau'],
+    github: 'https://github.com/Houssam265/Application-JAVA-E-Commerce-ChriOnline-.git',
+    demo: null,
+  },
+  {
     titleKey: 'projects.project_automate_title',
     descriptionKey: 'projects.project_automate_description',
     image: '/projects/automate.png',
