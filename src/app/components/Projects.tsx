@@ -5,18 +5,67 @@ import Image from 'next/image';
 import { ExternalLink, Github, Code2, MonitorPlay, Play, X, CheckCircle2, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+interface ProjectGalleryItem {
+  image: string;
+  altKey: string;
+}
+
 interface ProjectItem {
   titleKey: string;
   descriptionKey: string;
   image: string;
+  imageAltKey?: string;
   tags: string[];
   github?: string | null;
   demo?: string | null;
   video?: string | null;
+  poster?: string | null;
+  videoCaptionKey?: string;
   features?: string[];
+  gallery?: ProjectGalleryItem[];
 }
 
 const projectsData: ProjectItem[] = [
+  {
+    titleKey: 'projects.project_procure_to_pay_title',
+    descriptionKey: 'projects.project_procure_to_pay_description',
+    image: '/projects/procure-to-pay.jpg',
+    imageAltKey: 'projects.project_procure_to_pay_card_alt',
+    tags: ['SAP CAP', 'CDS', 'OData V4', 'SAP Fiori Elements', 'SAPUI5', 'Node.js', 'PostgreSQL', 'Docker'],
+    github: 'https://github.com/Houssam265/sap-cap-procure-to-pay',
+    demo: null,
+    video: '/procure-to-pay-demo.mp4',
+    poster: '/projects/procure-to-pay.jpg',
+    videoCaptionKey: 'projects.project_procure_to_pay_video_caption',
+    features: [
+      'projects.project_procure_to_pay_feature_1',
+      'projects.project_procure_to_pay_feature_2',
+      'projects.project_procure_to_pay_feature_3',
+      'projects.project_procure_to_pay_feature_4',
+      'projects.project_procure_to_pay_feature_5',
+      'projects.project_procure_to_pay_feature_6',
+      'projects.project_procure_to_pay_feature_7',
+      'projects.project_procure_to_pay_feature_8',
+    ],
+    gallery: [
+      {
+        image: '/projects/procure-to-pay-03-approval.jpg',
+        altKey: 'projects.project_procure_to_pay_gallery_1',
+      },
+      {
+        image: '/projects/procure-to-pay-04-po-split.jpg',
+        altKey: 'projects.project_procure_to_pay_gallery_2',
+      },
+      {
+        image: '/projects/procure-to-pay-05-goods-receipt.jpg',
+        altKey: 'projects.project_procure_to_pay_gallery_3',
+      },
+      {
+        image: '/projects/procure-to-pay-07-catalogue-stock.jpg',
+        altKey: 'projects.project_procure_to_pay_gallery_4',
+      },
+    ],
+  },
   {
     titleKey: 'projects.project_allojn_title',
     descriptionKey: 'projects.project_allojn_description',
@@ -212,7 +261,7 @@ export default function Projects() {
                 {project.image ? (
                   <Image
                     src={project.image}
-                    alt={t(project.titleKey)}
+                    alt={project.imageAltKey ? t(project.imageAltKey) : t(project.titleKey)}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -358,13 +407,24 @@ export default function Projects() {
                 <video
                   src={activeVideoProject.video}
                   controls
-                  autoPlay
+                  autoPlay={false}
+                  preload="metadata"
+                  muted
                   playsInline
+                  poster={activeVideoProject.poster || undefined}
+                  aria-label={activeVideoProject.videoCaptionKey ? t(activeVideoProject.videoCaptionKey) : undefined}
                   className="w-full h-full object-contain"
                 >
                   Votre navigateur ne supporte pas la lecture vidéo.
                 </video>
               </div>
+
+              {/* Accessible Video Caption */}
+              {activeVideoProject.videoCaptionKey && (
+                <p className="text-xs text-center text-gray-500 dark:text-gray-400 italic font-medium -mt-3">
+                  {t(activeVideoProject.videoCaptionKey)}
+                </p>
+              )}
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2">
@@ -398,6 +458,36 @@ export default function Projects() {
                       </li>
                     ))}
                   </ul>
+                </div>
+              )}
+
+              {/* Gallery (when available) */}
+              {activeVideoProject.gallery && activeVideoProject.gallery.length > 0 && (
+                <div className="bg-gray-50 dark:bg-slate-800/50 rounded-2xl p-6 border border-gray-100 dark:border-slate-700/50">
+                  <h4 className="text-base font-black text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+                    <Sparkles size={18} className="text-blue-600 dark:text-blue-400" />
+                    <span>{t('projects.modal_gallery_title')}</span>
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {activeVideoProject.gallery.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="relative aspect-video rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700 bg-gray-100 dark:bg-slate-900 group"
+                      >
+                        <Image
+                          src={item.image}
+                          alt={t(item.altKey)}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                          loading="lazy"
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-x-0 bottom-0 bg-slate-950/75 backdrop-blur-sm px-3 py-2 text-xs font-semibold text-white line-clamp-1">
+                          {t(item.altKey)}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>

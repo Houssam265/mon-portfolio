@@ -62,6 +62,10 @@ const skillsData = [
   { name: 'UML', icon: <Code2 className="text-gray-600" />, level: 85, categoryKey: 'skills.category_devops_tools' },
 
   { name: 'ERP Odoo 19', icon: <Layers className="text-purple-600" />, level: 90, categoryKey: 'skills.category_erp_crm' },
+  { name: 'SAP CAP', icon: <Layers className="text-blue-600" />, level: 90, categoryKey: 'skills.category_erp_crm' },
+  { name: 'CDS', icon: <Code2 className="text-sky-500" />, level: 85, categoryKey: 'skills.category_erp_crm' },
+  { name: 'OData V4', icon: <Globe className="text-teal-500" />, level: 85, categoryKey: 'skills.category_erp_crm' },
+  { name: 'SAP Fiori Elements', icon: <Layout className="text-indigo-500" />, level: 85, categoryKey: 'skills.category_erp_crm' },
   { name: 'Salesforce', icon: <Cloud className="text-sky-500" />, level: 85, categoryKey: 'skills.category_erp_crm' },
   { name: 'GoHighLevel', icon: <Users className="text-blue-600" />, level: 85, categoryKey: 'skills.category_erp_crm' },
   { name: 'Make.com', icon: <Workflow className="text-purple-500" />, level: 90, categoryKey: 'skills.category_erp_crm' },
